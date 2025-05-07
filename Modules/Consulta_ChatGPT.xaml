@@ -186,7 +186,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="487b7202-6826-467f-9e74-6ce74950a693" InformativeScreenshot="a9c42b4c7492ccaa6b9c2aee00f73e97" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl aaname='Copiar' aria-label='Copiar' tag='BUTTON' visibleinnertext='Copiar' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="487b7202-6826-467f-9e74-6ce74950a693" InformativeScreenshot="a9c42b4c7492ccaa6b9c2aee00f73e97" Selector="&lt;html app='chrome.exe' title='*' /&gt;&lt;webctrl aria-label='Copiar' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;article&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button' idx='2' tag='BUTTON' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
