@@ -114,7 +114,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="prueba" sap:VirtualizedContainerService.HintSize="1653,3436" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="prueba" sap:VirtualizedContainerService.HintSize="1653,3637" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="bro_TodosTusLibors" />
       <Variable x:TypeArguments="x:Boolean" Name="boo_CookiesPopUP" />
@@ -125,7 +125,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="645,3413" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="645,3614" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -133,14 +133,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="643,2444" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="643,2645" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Extraccion de libros" sap:VirtualizedContainerService.HintSize="609,2384" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Extraccion de libros" sap:VirtualizedContainerService.HintSize="609,2585" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:Browser" Name="bro_TodosTusLibros" />
             </Sequence.Variables>
@@ -151,20 +151,20 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:BuildDataTable DataTable="[dt_libros]" DisplayName="Creamos la tabla con los campos de resultado." sap:VirtualizedContainerService.HintSize="575,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Titulo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Autor&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ISBN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-            <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_bro_TodosTusLibros]" BrowserType="Chrome" DisplayName="Consultamos en la misma ventana del navegador" sap:VirtualizedContainerService.HintSize="575,2209" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+            <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_bro_TodosTusLibros]" BrowserType="Chrome" DisplayName="Consultamos en la misma ventana del navegador" sap:VirtualizedContainerService.HintSize="575,2410" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Busqueda de resultados de hasta 3 libros" sap:VirtualizedContainerService.HintSize="541,2077" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <Sequence DisplayName="Busqueda de resultados de hasta 3 libros" sap:VirtualizedContainerService.HintSize="541,2238" sap2010:WorkflowViewState.IdRef="Sequence_35">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Ejecutamos mientras queden libros y sean menos de tres resultados" sap:VirtualizedContainerService.HintSize="507,1909" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <Sequence DisplayName="Ejecutamos mientras queden libros y sean menos de tres resultados" sap:VirtualizedContainerService.HintSize="507,2070" sap2010:WorkflowViewState.IdRef="Sequence_13">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Int32" Default="1" Name="int_contador" />
                         <Variable x:TypeArguments="x:Int32" Default="24" Name="int_contadorISB" />
@@ -326,9 +326,9 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[boo_existeLibro and int_contador &lt; 4]" DisplayName="Ejecutamos hasta 3 veces la extracción de resultados de búsqueda de libros" sap:VirtualizedContainerService.HintSize="473,662" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                      <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[boo_existeLibro and int_contador &lt; 4]" DisplayName="Ejecutamos hasta 3 veces la extracción de resultados de búsqueda de libros" sap:VirtualizedContainerService.HintSize="473,823" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                         <ui:InterruptibleWhile.Body>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="471,532" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="471,693" sap2010:WorkflowViewState.IdRef="Sequence_14">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="str_titulo" />
                               <Variable x:TypeArguments="x:String" Name="str_autor" />
@@ -394,10 +394,10 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:GetAttribute>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() { str_titulo, str_autor, str_isbn}]" DataTable="[dt_libros]" DisplayName="Añadimos en la tabla el resultado de la búsqueda" sap:VirtualizedContainerService.HintSize="437,57" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object() { Trim(str_titulo.Replace(Environment.NewLine, &quot;&quot;).Replace(vbLf, &quot;&quot;).Replace(vbCr, &quot;&quot;)), Trim(str_autor.Replace(Environment.NewLine, &quot;&quot;).Replace(vbLf, &quot;&quot;).Replace(vbCr, &quot;&quot;)), Trim(str_isbn.Replace(Environment.NewLine, &quot;&quot;).Replace(vbLf, &quot;&quot;).Replace(vbCr, &quot;&quot;))}]" DataTable="[dt_libros]" DisplayName="Añadimos en la tabla el resultado de la búsqueda" sap:VirtualizedContainerService.HintSize="437,218" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -424,7 +424,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InterruptibleWhile>
-                      <ui:OutputDataTable DataTable="[dt_libros]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="473,103" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[out_dtatablelibros]" />
+                      <ui:OutputDataTable DataTable="[dt_libros]" DisplayName="Esportamos la Tabla" sap:VirtualizedContainerService.HintSize="473,103" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[out_dtatablelibros]" />
                     </Sequence>
                     <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="507,108" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="https://www.todostuslibros.com/buscador_avanzado" />
                   </Sequence>

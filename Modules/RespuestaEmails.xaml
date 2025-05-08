@@ -108,7 +108,7 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="RespuestaEmails" sap:VirtualizedContainerService.HintSize="820,1850" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RespuestaEmails" sap:VirtualizedContainerService.HintSize="1653,1850" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -122,7 +122,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="468,798" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Envio de emails de respuesta" sap:VirtualizedContainerService.HintSize="468,798" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="st_emailContraportada" />
               <Variable x:TypeArguments="ss:SecureString" Name="st_password" />
@@ -139,8 +139,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CredentialGmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="nexusdatacorporation@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[st_password]" Username="[st_emailContraportada]" />
-            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CredentialGmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).toString]" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[st_password]" Username="[st_emailContraportada]" />
+            <Assign DisplayName="Grabamos valor del remitente" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[st_remitente]</OutArgument>
               </Assign.To>
@@ -148,15 +148,15 @@
                 <InArgument x:TypeArguments="x:String">[in_email]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Grabamos valor del asunto del mensaje" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[st_asunto]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">Respuesta a consulta sobre libros</InArgument>
+                <InArgument x:TypeArguments="x:String">[in_Config("AsuntoCorreoOK").ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ReadTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Paso a texto el achivo cuerpo1.html" Content="[st_cuerpo1]" DisplayName="Read Text File" FileName="extra\cuerpo1.html" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+            <ui:ReadTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Paso a texto el achivo cuerpo1.html" Content="[st_cuerpo1]" DisplayName="Leemos fichero de cuerpo del mensaje" FileName="[in_Config(&quot;CorreoHtmlOK&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -186,7 +186,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="468,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[exception.Message]" />
-              <Assign sap:VirtualizedContainerService.HintSize="468,105" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign DisplayName="Grabamos valor de excepcion de sistema" sap:VirtualizedContainerService.HintSize="468,105" sap2010:WorkflowViewState.IdRef="Assign_7">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:Exception">[out_errorSystem]</OutArgument>
                 </Assign.To>
@@ -209,7 +209,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="468,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[exception.Message]" />
-              <Assign sap:VirtualizedContainerService.HintSize="468,105" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign DisplayName="Grabamos valor de excepcion de Negocio" sap:VirtualizedContainerService.HintSize="468,105" sap2010:WorkflowViewState.IdRef="Assign_8">
                 <Assign.To>
                   <OutArgument x:TypeArguments="ui:BusinessRuleException">[out_errorBusiness]</OutArgument>
                 </Assign.To>
