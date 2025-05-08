@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aE6qSG1G3UyimXowycO7kg" Reference="bA7jbHH3lkmgtkDlCZaz9w/5k71SClMBUGsQaBTuKyvcg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="chatgpt.com" CVScreenId="f1c5bdef-7df9-4246-8e0b-2441591c9067" CvTextArea="743, 716, 254, 25" CvTextArgument="Pregunta lo que quieras" CvType="Text" DesignTimeRectangle="744, 706, 1105, 36" DesignTimeScaleFactor="1.5" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='placeholder' aaname='' /&gt;" Guid="1561a824-5b35-4196-91fa-3663a123bc88" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="e436d84b37bba0b4f1aa17b02679ce92.png" xmlns="">0ofEqQC-NYEuEObdtk0KPFg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

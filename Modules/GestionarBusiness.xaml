@@ -104,13 +104,13 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GestionarBusiness" sap:VirtualizedContainerService.HintSize="1653,2320" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GestionarBusiness" sap:VirtualizedContainerService.HintSize="1653,2583" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="GestionarBusiness" sap:VirtualizedContainerService.HintSize="468,2297" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="GestionarBusiness" sap:VirtualizedContainerService.HintSize="468,2560" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="str_mensajeError" />
         <Variable x:TypeArguments="x:String" Name="str_emailContraportada" />
@@ -132,7 +132,7 @@
           <InArgument x:TypeArguments="x:String">[in_errorBusiness.message]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:IfElseIfV2 Condition="[str_mensajeError.Contains(&quot;SL-01&quot;)]" DisplayName="Gestion de las excepciones business" sap:VirtualizedContainerService.HintSize="434,1813" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+      <ui:IfElseIfV2 Condition="[str_mensajeError.Contains(&quot;SL-01&quot;)]" DisplayName="Gestion de las excepciones business" sap:VirtualizedContainerService.HintSize="434,2076" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
         <ui:IfElseIfV2.Else>
           <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
@@ -187,6 +187,18 @@
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                     </ui:SendMail.Files>
                   </ui:SendMail>
+                </Sequence>
+              </ui:IfElseIfBlock.Then>
+            </ui:IfElseIfBlock>
+            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[str_mensajeError.Contains(&quot;SL-05&quot;)]" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_9">
+              <ui:IfElseIfBlock.Then>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;Error SL-05&quot;]" />
                 </Sequence>
               </ui:IfElseIfBlock.Then>
             </ui:IfElseIfBlock>

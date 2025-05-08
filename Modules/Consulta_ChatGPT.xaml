@@ -41,6 +41,11 @@
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -91,15 +96,21 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Consulta_ChatGPT" sap:VirtualizedContainerService.HintSize="1335,1182.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Consulta_ChatGPT" sap:VirtualizedContainerService.HintSize="798,993.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Consulta a chatGPT por los datos encontrados en el cuerpo del correo" sap:VirtualizedContainerService.HintSize="518,967" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Consulta a chatGPT por los datos encontrados en el cuerpo del correo" sap:VirtualizedContainerService.HintSize="518,970.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="str_Prompt" />
         <Variable x:TypeArguments="x:String" Name="str_CuerpoMensaje" />
@@ -109,7 +120,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Inicializamos variables" sap:VirtualizedContainerService.HintSize="484,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign DisplayName="Inicializamos variables" sap:VirtualizedContainerService.HintSize="484,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -131,19 +142,19 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_bro_chatGPT]" BrowserType="Chrome" DisplayName="Realizamos la consulta a ChatGPT" sap:VirtualizedContainerService.HintSize="484,705" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+      <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_bro_chatGPT]" BrowserType="Chrome" DisplayName="Realizamos la consulta a ChatGPT" sap:VirtualizedContainerService.HintSize="484,708" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,573" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,576" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click en nuevo chat" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click en nuevo chat" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -165,7 +176,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="5000" DelayMS="5000" DisplayName="Tecleamos la búsquea en chatGPT" EmptyField="True" sap:VirtualizedContainerService.HintSize="416,187" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[str_Prompt + str_CuerpoMensaje+ &quot;[k(enter)]&quot;]">
+              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="5000" DelayMS="5000" DisplayName="Tecleamos la búsquea en chatGPT" EmptyField="True" sap:VirtualizedContainerService.HintSize="416,189.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[str_Prompt + str_CuerpoMensaje+ &quot;[k(enter)]&quot;]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="11f3ad8e-6010-440a-b281-b5164c206c75" InformativeScreenshot="4a0ed19345aaad16ca64621d2eb7729f" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='thread-bottom' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
                     <ui:Target.TimeoutMS>
@@ -174,7 +185,7 @@
                   </ui:Target>
                 </ui:TypeInto.Target>
               </ui:TypeInto>
-              <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="2000" DisplayName="Copiamos la respuesta que nos da ChatGPT" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="2000" DisplayName="Copiamos la respuesta que nos da ChatGPT" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
